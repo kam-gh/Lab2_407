@@ -50,9 +50,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void subtraction(View view) {
 
+        int intValue1 = 0;
+        int intValue2 = 0;
+
         EditText myTextField1 = (EditText) findViewById(R.id.myTextField1);
         String text1 = myTextField1.getText().toString();
-        int intValue1 = Integer.parseInt(text1);
 
         try {
             intValue1 = Integer.parseInt(text1);
@@ -61,9 +63,9 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
+
         EditText myTextField2 = (EditText) findViewById(R.id.myTextField2);
         String text2 = myTextField2.getText().toString();
-        int intValue2 = Integer.parseInt(text2);
 
         try {
             intValue2 = Integer.parseInt(text2);
@@ -80,9 +82,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void multiplication(View view) {
 
+        int intValue1 = 0;
+        int intValue2 = 0;
+
         EditText myTextField1 = (EditText) findViewById(R.id.myTextField1);
         String text1 = myTextField1.getText().toString();
-        int intValue1 = Integer.parseInt(text1);
 
         try {
             intValue1 = Integer.parseInt(text1);
@@ -91,9 +95,9 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
+
         EditText myTextField2 = (EditText) findViewById(R.id.myTextField2);
         String text2 = myTextField2.getText().toString();
-        int intValue2 = Integer.parseInt(text2);
 
         try {
             intValue2 = Integer.parseInt(text2);
@@ -110,9 +114,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void division(View view) {
 
+        int intValue1 = 0;
+        int intValue2 = 0;
+
         EditText myTextField1 = (EditText) findViewById(R.id.myTextField1);
         String text1 = myTextField1.getText().toString();
-        int intValue1 = Integer.parseInt(text1);
 
         try {
             intValue1 = Integer.parseInt(text1);
@@ -121,18 +127,18 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
+
         EditText myTextField2 = (EditText) findViewById(R.id.myTextField2);
         String text2 = myTextField2.getText().toString();
-        int intValue2 = Integer.parseInt(text2);
-        if (intValue2 == 0) {
-            goToActivity("Error: Divide by 0.");
-        }
 
         try {
             intValue2 = Integer.parseInt(text2);
         } catch (Exception e) {
             goToActivity("Error: Must enter two integers");
             return;
+        }
+        if (intValue2 == 0) {
+            goToActivity("Error: Divide by 0.");
         }
 
         int finalVal = intValue1 / intValue2;
